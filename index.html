@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROYECTO FONDECYT 1221091</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+      .header-image {
+        width: 90%;
+        min-height: 250px; /* Altura mínima */
+        max-height: 400px; /* Evita que crezca demasiado en pantallas grandes */
+        object-fit: cover;
+        border-bottom: 5px solid #333;
+        padding-top: 10px;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        font-size: 16px; 
+      }
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+      .description {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify; 
+        
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+      }
+      .grid-item {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+      .grid-item:hover {
+        transform: scale(1.05);
+      }
+      .grid-item img {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        width: 100%;
+        aspect-ratio: 1 / 0; /* Hace que el cuadro sea cuadrado */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .grid-item a {
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        color: #333;
+        padding: 10px;
+      }
+      .grid-item a:hover {
+        color: #ff5733;
+      }
+      
+      h2{
+        background-color: rgb(169, 215, 233);
+        padding: 15px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+
+      h3{
+        font-size: 25px;
+        text-align: left;
+        background-color: #cfe8f8;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .hacer {
+      text-align: left; /* Mantiene el texto alineado a la izquierda */
+      padding: 1px; /* Espaciado interno */
+
+    }
+
+    .hacer h3 {
+        margin-bottom: 5px; /* Espacio debajo del título */
+    }
+
+    .hacer ul {
+        padding-left: 20px; /* Asegura la indentación de la lista */
+        list-style-type: disc; /* Usa puntos como viñetas */
+        font-size: 20px;
+    }
+
+    .hacer ul li {
+    margin-bottom: 5px; /* Aumenta el espacio entre elementos de la lista */
+    line-height: 1.6; /* Mejora la legibilidad con más espacio entre líneas */
+    }
+    span{
+      font-weight: bold;
+    }
+    .mapa{
+      display: block;
+      margin: 50px;
+      width: 80%;
+      max-width: 1000px;
+      height: auto;
+    }
+
+    .directores {
+    margin: 5px 0; 
+    line-height: 1.2; 
+    }
+
+    .directores a {
+        color: #0077cc; 
+        text-decoration: none; 
+        font-weight: bold; 
+    }
+
+    .directores a:hover {
+        text-decoration: underline; /* Agrega subrayado al pasar el mouse */
+    }
+
+    /* Contenedor para centrar y organizar la imagen con su descripción */
+    .contenedor-imagen {
+        display: flex;
+        flex-direction: column; /* Acomoda la imagen arriba y el texto debajo */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Estilos del contenedor de la imagen */
+    .imagen-app {
+        width: 80%;
+        max-width: 1000px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efecto al pasar el mouse sobre la imagen */
+    .imagen-app:hover {
+        transform: scale(1.05); /* Aumenta el tamaño un 5% */
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Acentúa la sombra */
+    }
+
+    /* Ajusta la imagen dentro del contenedor */
+    .imagen-app img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    /* Estilo del texto debajo de la imagen */
+    .texto-bajo-imagen {
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Estilo del enlace debajo de la imagen */
+    .texto-bajo-imagen a {
+        color: #0077cc;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .texto-bajo-imagen a:hover {
+        text-decoration: underline;
+    }
+
+    </style>
+  </head>
+  <body>
+    <img src="assets/images/lag_villarrica_panoramica_2.jpg" alt="Imagen de encabezado" class="header-image" />
+    <div class="container">
+      <div class="title">Proyecto FONDECYT 1221091</div>
+      <h2>“Seasonal and interannual variability of inherent and apparent optical properties in lakes and reservoirs in 
+        south-central Chile: Implications for bio-optical modeling and water quality”</h1>
+        <p class="directores"><span>Project Managers:</span></p>
+        <p class="directores">Germán Velásquez - <a href="mailto:germanvelasquez@udec.cl">germanvelasquez@udec.cl</a></p>
+        <p class="directores">Santiago Yépez - <a href="mailto:santiago@example.com">syepez@udec.cl</a></p>
+
+        <div class="description">
+        <p>Water quality monitoring in Chile has historically been a challenge due to the low density of measurement 
+          stations, with only 829 stations covering more than 12,000 lakes and 1,200 rivers. Traditional methods, based 
+          on sporadic in situ sampling, did not allow for continuous monitoring or early detection of problems such as 
+          eutrophication or pollution.</p>
+        
+          <p>To address this limitation, we developed an advanced monitoring system using remote sensing technology. 
+            Through satellite images, hyperspectral spectroscopy and bio-optical models, we were able to assess and 
+            monitor water quality in four strategic lakes in south-central Chile: Laguna Grande de San Pedro de la Paz, 
+            Lago Lanalhue, Lago Villarrica and Lago Llanquihue.</p>
+      </div>
+      <div class="hacer">
+        <h3>How did we do it?</h3>
+          <ul>
+              <li>In situ spectral measurements were performed with hyperspectral radiometers.</li>
+              <li>Advanced atmospheric correction techniques were implemented.</li>
+              <li>Key water quality parameters were analyzed.</li>
+              <li>Regional bio-optical estimation algorithms were developed.</li>
+              <li>A semi-automated WEB-GIS system was implemented.</li>
+          </ul>
+        <h3>
+          Results and Applications
+        </h3>
+        <div class="description">
+          <p>
+            The project allowed for a precise characterization of eutrophication processes in the lakes studied, 
+            identifying critical zones and patterns of temporal variability. Thanks to the integration of satellite 
+            data with field measurements, a reliable database was established for the management and conservation of 
+            these aquatic ecosystems.
+          </p>
+          <p>
+            In addition, the developed system enables continuous and low-cost monitoring, facilitating decision-making 
+            for environmental authorities and local communities. This methodology is scalable and adaptable to other bodies 
+            of water in Chile and the world, offering an efficient solution for environmental monitoring based on remote 
+            sensing technologies.
+          </p>
+          <h4>Lanalhue Lake Study Area</h4>
+          <p>
+            <span>(a)</span> Map showing the location of Lake Lanalhue within the south-central region of Chile
+            (area highlighted in red). <span>(b)</span> Zoomed-in view highlighting specific area within the larger region.
+             <span>(c)</span> Detailed map of Lake Lanalhue, including the distribution of sampling stations, the hydrographic 
+             network and bathymetry.
+          </p>
+          <img src="assets/images/mapa_lago_lanalhue.png" alt="Mapa lago lanalhue" class="mapa">
+          <h4>Chlorophyll-a Distribution Map</h4>
+          <p>
+            Chlorophyll-a <span>(Chl-a)</span> distribution maps for Lake Lanalhue, showing the variation in concentration 
+            values ​​during the summer, fall, winter, and spring seasons in the years <span>2014 (A–D) and 2022 (E–H)</span>.
+          </p>
+          <img src="assets/images/mapa_clorofila-a.png" alt="Mapa lago lanalhue" class="mapa">
+        </div>
+      </div>
+      <h3>
+        Photographic Record of Project Lagoons
+      </h3>
+      <div class="grid">
+        <div class="grid-item">
+          <img src="assets/images/lago_villarrica.png" alt="Lago Villarrica" />
+          <a href="https://drive.google.com/drive/folders/1qi5ISV_bcMCvwdza_D0ujdSugm6Q-onl?usp=sharing" target="_blanks">Photos of Villarrica Lake</a>
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/lago_lanalhue.png" alt="Lago Lananlhue" />
+          <a href="https://drive.google.com/drive/folders/1S4T82XEEnn6YnE2vIjaoD6NP311HIjjh?usp=sharing">Photos of Lake Lanalhue</a>
+        </div>
+      </div>
+      <h3>Link to Water Quality Monitoring Platform</h3>
+      <div class="contenedor-imagen">
+          <div class="imagen-app">
+              <img src="assets/images/app_lagos.png" alt="Imagen de app monitoreo lagunas" />
+          </div>
+          <p class="texto-bajo-imagen">
+            Find out more about our platform:
+              <a href="https://ee-fondecyt1221091-2025.projects.earthengine.app/view/app1221091" target="_blank">Water Quality Monitoring Platform
+</a>
+          </p>
+      </div>
+    </div>
+  </body>
+</html>
